@@ -8,7 +8,6 @@ from selenium.webdriver.chrome.service import Service
 from getpass import getpass
 
 class LoginPage:
-    # Локаторы как константы класса
     URL = "https://github.com/login"
     USERNAME_INPUT = (By.ID, "login_field")
     PASSWORD_INPUT = (By.ID, "password")
@@ -39,7 +38,6 @@ class LoginPage:
         except:
             return False
 
-# Использование
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.maximize_window()
 
